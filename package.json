@@ -1,0 +1,20 @@
+{
+  "name": "api-healthcare-sql",
+  "version": "1.0.0",
+  "description": "Proyecto Serverless para función Lambda conectada a base de datos SQL",
+  "main": "handler.js",
+  "scripts": {
+    "deploy": "serverless deploy",
+    "offline": "serverless offline"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "mysql2": "^3.10.0",
+    "pdfkit": "0.17.2"
+  },
+  "devDependencies": {
+    "serverless-dotenv-plugin": "^6.0.0",
+    "serverless-offline": "^12.0.4"
+  }
+}

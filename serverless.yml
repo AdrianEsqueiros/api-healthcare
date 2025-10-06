@@ -1,0 +1,38 @@
+service: api-healthcare-sql
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  environment:
+    DB_HOST: test.cq5ics2qicsy.us-east-1.rds.amazonaws.com
+    DB_USER: admin
+    DB_PASSWORD: adrian1998
+    DB_NAME: test
+  apiGateway:
+    binaryMediaTypes:
+      - application/pdf
+functions:
+  queryDatabase:
+    handler: handler.queryDatabase
+    events:
+      - http:
+          path: query
+          method: get
+          cors:
+            origin: '*'
+            headers:
+              - Content-Type
+              - X-Amz-Date
+              - Authorization
+              - X-Api-Key
+              - X-Amz-Security-Token
+              - X-Amz-User-Agent
+            allowCredentials: false
+custom:
+  apiGateway:
+    binary:
+      types:
+        - application/pdf
+plugins:
+  - serverless-dotenv-plugin
+  - serverless-offline

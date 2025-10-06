@@ -1,0 +1,9 @@
+- [ ] Verificar que el archivo copilot-instructions.md en el directorio .github está creado.
+- [ ] Clarificar requerimientos del proyecto
+- [ ] Generar la estructura del proyecto
+- [ ] Personalizar el proyecto
+- [ ] Instalar extensiones necesarias
+- [ ] Compilar el proyecto
+- [ ] Crear y ejecutar tarea
+- [ ] Lanzar el proyecto
+- [ ] Verificar documentación
